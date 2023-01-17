@@ -1,13 +1,5 @@
-const { exec } = require("child_process");
+#!/usr/bin/env node
 
-exec("ls -lah", (error, stdout, stderr) => {
-    if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-    }
-    if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-    }
-    console.log(`stdout: ${stdout}`);
-});
+import { exec } from "child_process";
+
+console.log("HELLO WORLD!");

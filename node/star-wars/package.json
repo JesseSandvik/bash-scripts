@@ -2,10 +2,10 @@
   "name": "star-wars",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc --watch",
-    "start": "node index.js",
+    "start": "node dist/index.js",
     "test": "jest --coverage --watch"
   },
   "keywords": [],
@@ -16,5 +16,8 @@
     "@types/node": "^18.11.18",
     "jest": "^29.3.1",
     "ts-jest": "^29.0.5"
+  },
+  "bin": {
+    "udf_install": "./index.js"
   }
 }

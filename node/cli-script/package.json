@@ -1,0 +1,19 @@
+{
+  "name": "cli-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "udf_install.js",
+  "scripts": {
+    "ts:watch": "tsc --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "udf_install": "./dist/udf_install.js"
+  },
+  "dependencies": {
+    "@types/node": "^18.11.18"
+  }
+}
