@@ -1,0 +1,8 @@
+#! /bin/sh
+
+java --version;
+npm --version;
+
+if [ "$1" = "-name" ]; then
+	echo "Jesse Sandvik";
+fi
