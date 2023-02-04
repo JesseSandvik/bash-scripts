@@ -1,0 +1,25 @@
+#! /bin/bash
+
+source $(dirname "$0")/lib/_bool.sh;
+source $(dirname "$0")/lib/_echo.sh;
+source $(dirname "$0")/lib/_file.sh;
+source $(dirname "$0")/lib/_print.sh;
+
+java -version;
+npm -version;
+
+type -p javac;
+
+echo $PATH;
+
+if [ "$1" = "-name" ]; then
+	echo "Jesse Sandvik";
+fi
+
+if [ "$1" = "-name" ]; then
+	echo "Jesse Sandvik";
+fi
+
+if [ "$1" = "-name" ]; then
+	echo "Jesse Sandvik";
+fi
