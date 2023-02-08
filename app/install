@@ -1,25 +1,13 @@
 #! /bin/bash
 
-source $(dirname "$0")/lib/_bool.sh;
-source $(dirname "$0")/lib/_echo.sh;
-source $(dirname "$0")/lib/_file.sh;
-source $(dirname "$0")/lib/_print.sh;
+source $(dirname "$0")/lib/_bool;
+source $(dirname "$0")/lib/_echo;
+source $(dirname "$0")/lib/_file;
+source $(dirname "$0")/lib/_print;
 
-java -version;
-npm -version;
-
-type -p javac;
-
-echo $PATH;
-
-if [ "$1" = "-name" ]; then
-	echo "Jesse Sandvik";
-fi
-
-if [ "$1" = "-name" ]; then
-	echo "Jesse Sandvik";
-fi
-
-if [ "$1" = "-name" ]; then
-	echo "Jesse Sandvik";
-fi
+source $(dirname "$0")/shell/_options;
+source $(dirname "$0")/out/print_head;
+source $(dirname "$0")/out/print_user_env $USER $(uname) $SHELL;
+print_information_message $(source $(dirname "$0")/shell/_setup);
+source $(dirname "$0")/out/print_foot_fail;
+source $(dirname "$0")/out/print_foot_success;
