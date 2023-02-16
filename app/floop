@@ -1,0 +1,32 @@
+#!/bin/bash
+
+txt_files=();
+
+first_name="Jesse";
+last_name="Sandvik";
+role="Software Engineer";
+company="JPMorganChase & Co.";
+
+dir=/mnt/c/Users/Jesse/Documents/sampledocs
+
+if [[ -f "$dir"/*.txt ]]; then
+    for file in $(ls "$dir/*.txt"); do
+        rm -v "$dir"/*.txt;
+    done
+else
+    counter=1;
+    while [[ "$counter" -le 5 ]]; do
+        touch "$dir/sample$counter.txt";
+        $(( counter++ ));
+    done
+fi
+
+for entry in $(ls "$dir"/*.txt); do
+
+    echo "Hi, my name is $first_name $last_name and I am a $role at $company" >> "$entry";
+    txt_files+=("$entry");
+done
+
+for entry in "${txt_files[@]}"; do
+    cat "$entry";
+done
